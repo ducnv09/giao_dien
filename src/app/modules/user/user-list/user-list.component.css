@@ -1,0 +1,18 @@
+.container-config {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    justify-content: center;
+    background-color: #F2F3F7;
+}
+
+.input-search {
+    border-radius: 1rem;
+    border: 1px solid gray;
+    padding: 0.3rem 2rem;
+
+}
+
+.icon-search {
+    left: 10px;
+}
