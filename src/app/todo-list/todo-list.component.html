@@ -1,0 +1,18 @@
+<div class="h-100 d-flex justify-content-center align-items-center">
+    <div class="h-75">
+        <div>
+            <input type="text" #todoText placeholder="Add todo">
+            <button (click)="addTask(todoText.value)">Add</button>
+        </div>
+        
+        <ul class="list-unstyled">
+            <li *ngFor="let todoItem of todoList" class="d-flex justify-content-between align-items-center mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input type="checkbox" [(checked)]="todoItem.completed" (change)="toggleCompleted(todoItem.id)">
+                    <span [class.completed]="todoItem.completed">{{ todoItem.task }}</span>
+                </div>
+                <button (click)="deleteTask(todoItem.id)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
